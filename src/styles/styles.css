@@ -1,0 +1,5 @@
+:root {
+  --green-light: hsl(111, 55%, 64%);
+  --green-medium: hsl(140, 49%, 55%);
+  --green-dark: hsl(160, 64%, 43%);
+}
