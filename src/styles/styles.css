@@ -10,6 +10,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
@@ -26,7 +27,7 @@ html {
 body {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: var(--gray-text);
   overflow: hidden;
@@ -57,13 +58,13 @@ body {
 
 .logo-link {
   position: absolute;
-  top: 40px;
-  left: 40px;
-  padding: 8px;
+  top: 4rem;
+  left: 4rem;
+  padding: 0.8rem;
 }
 
 .logo {
-  height: 40px;
+  height: 4rem;
 }
 
 .header__main-content {
@@ -85,9 +86,9 @@ body {
 
 .heading-primary--main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 32px;
+  letter-spacing: 3.2rem;
   -webkit-animation-name: moveInLeft;
   animation-name: moveInLeft;
   -webkit-animation-duration: 0.6s;
@@ -98,13 +99,13 @@ body {
 
 .heading-primary--sub {
   display: block;
-  -webkit-margin-after: 40px;
-  margin-block-end: 40px;
-  font-size: 19px;
+  -webkit-margin-after: 4rem;
+  margin-block-end: 4rem;
+  font-size: 1.9rem;
   font-weight: 300;
-  letter-spacing: 15.2px;
-  -webkit-margin-start: -16px;
-  margin-inline-start: -16px;
+  letter-spacing: 1.52rem;
+  -webkit-margin-start: -1.6rem;
+  margin-inline-start: -1.6rem;
   -webkit-animation-name: moveInRight;
   animation-name: moveInRight;
   -webkit-animation-duration: 0.6s;
@@ -137,10 +138,10 @@ body {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 1px;
-  padding: 16px 28px;
-  border-radius: 32px;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  padding: 1.6rem 2.8rem;
+  border-radius: 3.2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -150,7 +151,7 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 32px;
+  border-radius: 3.2rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -160,10 +161,10 @@ body {
 }
 
 .btn:hover {
-  -webkit-transform: translateY(-3px);
-  transform: translateY(-3px);
-  letter-spacing: 2px;
-  box-shadow: 0 4px 10px hsla(0, 0%, 0%, 0.1);
+  -webkit-transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
+  letter-spacing: 0.2rem;
+  box-shadow: 0 4px 1px hsla(0, 0%, 0%, 0.1);
 }
 
 .btn:hover::after {
@@ -173,8 +174,8 @@ body {
 }
 
 .btn:active {
-  -webkit-transform: translateY(-1px);
-  transform: translateY(-1px);
+  -webkit-transform: translateY(-0.1rem);
+  transform: translateY(-0.1rem);
 }
 
 .btn--white {
@@ -196,8 +197,8 @@ body {
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-96px);
-    transform: translateX(-96px);
+    -webkit-transform: translateX(-9.6rem);
+    transform: translateX(-9.6rem);
   }
 
   100% {
@@ -210,8 +211,8 @@ body {
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-96px);
-    transform: translateX(-96px);
+    -webkit-transform: translateX(-9.6rem);
+    transform: translateX(-9.6rem);
   }
 
   100% {
@@ -224,8 +225,8 @@ body {
 @-webkit-keyframes moveInRight {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(96px);
-    transform: translateX(96px);
+    -webkit-transform: translateX(9.6rem);
+    transform: translateX(9.6rem);
   }
 
   100% {
@@ -238,8 +239,8 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(96px);
-    transform: translateX(96px);
+    -webkit-transform: translateX(9.6rem);
+    transform: translateX(9.6rem);
   }
 
   100% {
@@ -252,8 +253,8 @@ body {
 @-webkit-keyframes moveInBottom {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px);
+    -webkit-transform: translateY(4rem);
+    transform: translateY(4rem);
   }
 
   100% {
@@ -266,8 +267,8 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(40px);
-    transform: translateY(40px);
+    -webkit-transform: translateY(4rem);
+    transform: translateY(4rem);
   }
 
   100% {
