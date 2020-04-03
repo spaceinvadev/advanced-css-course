@@ -1,2 +1,3 @@
-# natours
-Natours Project of the Advanced CSS and Sass course
+# Advanced CCS Course
+
+Advanced CSS and Sass: Flexbox, Grid, Animations and More!
