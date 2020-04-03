@@ -1,0 +1,39 @@
+.header {
+  position: relative;
+  height: 96vh;
+  background-image: -webkit-gradient(linear,
+      left top,
+      right top,
+      from($green-light-80),
+      to($green-dark-80)),
+    url("../assets/hero.jpg");
+  background-image: linear-gradient(to right, $green-light-80, $green-dark-80),
+    url("../assets/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  &__logo {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    padding: 0.8rem;
+
+    &__img {
+      height: 4rem;
+    }
+  }
+
+
+  &__main-content {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-align: center;
+  }
+}

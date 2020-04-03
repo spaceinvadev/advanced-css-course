@@ -1,0 +1,53 @@
+.heading-primary {
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.2rem;
+    -webkit-animation-name: moveInLeft;
+    animation-name: moveInLeft;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    display: block;
+    -webkit-margin-after: 4rem;
+    margin-block-end: 4rem;
+    font-size: 1.9rem;
+    font-weight: 300;
+    letter-spacing: 1.52rem;
+    -webkit-margin-start: -1.6rem;
+    margin-inline-start: -1.6rem;
+    -webkit-animation-name: moveInRight;
+    animation-name: moveInRight;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  &--main::-moz-selection,
+  &--sub::-moz-selection {
+    background-color: $white;
+    color: $green-medium;
+  }
+
+  &--main::-moz-selection,
+  &--sub::-moz-selection {
+    background-color: $white;
+    color: $green-medium;
+  }
+
+  &--main::selection,
+  &--sub::selection {
+    background-color: $white;
+    color: $green-medium;
+  }
+}
