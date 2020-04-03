@@ -1,5 +1,4 @@
 .btn {
-
   &:link,
   &:visited {
     position: relative;
@@ -60,5 +59,34 @@
     animation: moveInBottom 0.5s ease-out 0.75s;
     -webkit-animation-fill-mode: backwards;
     animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    color: $green-medium;
+    display: inline-block;
+    text-decoration: none;
+    font-size: $body-font-size;
+    -webkit-border-after: 1px solid $green-medium;
+    border-block-end: 1px solid $green-medium;
+    padding: 3px 6px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    color: white;
+    background-color: $green-medium;
+    box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.15);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.15);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
