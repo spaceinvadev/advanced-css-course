@@ -1,0 +1,31 @@
+.feature-box {
+  background-color: hsla(0, 0%, 100%, 0.64);
+  font-size: 1.5rem;
+  padding: 2.4rem;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 1.5rem 4rem hsla(0, 0%, 0%, 0.15);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+
+  &:hover {
+    -webkit-transform: translateY(-1.2rem) scale(1.03);
+    transform: translateY(-1.2rem) scale(1.03);
+    cursor: pointer;
+  }
+
+  &__icon {
+    font-size: 4.8rem;
+    color: $green-medium;
+    margin: 0 auto 2.4rem auto;
+    display: block;
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+  &__desc {
+    font-size: 1.4rem;
+  }
+}

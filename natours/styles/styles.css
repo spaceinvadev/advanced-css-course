@@ -234,6 +234,7 @@ body {
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     border-radius: 2px;
     position: absolute;
+    -webkit-transition: all 0.2s;
     transition: all 0.2s; }
     .composition__photo--p1 {
       left: 0;
@@ -247,11 +248,38 @@ body {
     .composition__photo:hover {
       outline: 1.2rem solid #54c47a;
       outline-offset: 1.6rem;
+      -webkit-transform: scale(1.05) translateY(-0.5rem);
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
       z-index: 20; }
   .composition:hover .composition__photo:not(:hover) {
+    -webkit-transform: scale(0.96);
     transform: scale(0.96); }
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.64);
+  font-size: 1.5rem;
+  padding: 2.4rem;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
+  .feature-box:hover {
+    -webkit-transform: translateY(-1.2rem) scale(1.03);
+    transform: translateY(-1.2rem) scale(1.03);
+    cursor: pointer; }
+  .feature-box__icon {
+    font-size: 4.8rem;
+    color: #54c47a;
+    margin: 0 auto 2.4rem auto;
+    display: block;
+    width: 6.4rem;
+    height: 6.4rem; }
+  .feature-box__desc {
+    font-size: 1.4rem; }
 
 .row {
   max-width: 114rem;
@@ -307,3 +335,10 @@ body {
   background-color: #f7f7f7;
   padding: 24rem 0;
   margin-block-start: -16vh; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(128, 214, 113, 0.8)), to(rgba(39, 180, 133, 0.8))), url("../assets/nat-4.jpg");
+  background-image: linear-gradient(to right, rgba(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)), url("../assets/nat-4.jpg");
+  background-size: cover;
+  background-position: center; }
