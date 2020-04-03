@@ -1,11 +1,14 @@
 .section-about {
   background-color: $gray-light-1;
-  padding: 24rem 0;
+  padding: 24rem 0 28rem 0;
+  -webkit-margin-before: -16vh;
   margin-block-start: -16vh;
 }
 
 .section-features {
-  padding: 20rem 0;
+  padding: 24rem 0;
+  -webkit-margin-before: -8rem;
+  margin-block-start: -8rem;
   background-image: -webkit-gradient(
       linear,
       left top,
@@ -18,4 +21,11 @@
     url("../assets/nat-4.jpg");
   background-size: cover;
   background-position: center;
+  -webkit-transform: skewY(-4.8deg);
+  transform: skewY(-4.8deg);
+
+  & > * {
+    -webkit-transform: skewY(4.8deg);
+    transform: skewY(4.8deg);
+  }
 }

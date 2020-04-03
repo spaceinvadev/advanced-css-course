@@ -333,12 +333,20 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 24rem 0;
+  padding: 24rem 0 28rem 0;
+  -webkit-margin-before: -16vh;
   margin-block-start: -16vh; }
 
 .section-features {
-  padding: 20rem 0;
+  padding: 24rem 0;
+  -webkit-margin-before: -8rem;
+  margin-block-start: -8rem;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(128, 214, 113, 0.8)), to(rgba(39, 180, 133, 0.8))), url("../assets/nat-4.jpg");
   background-image: linear-gradient(to right, rgba(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)), url("../assets/nat-4.jpg");
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  -webkit-transform: skewY(-4.8deg);
+  transform: skewY(-4.8deg); }
+  .section-features > * {
+    -webkit-transform: skewY(4.8deg);
+    transform: skewY(4.8deg); }
