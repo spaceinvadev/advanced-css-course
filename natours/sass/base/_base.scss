@@ -20,4 +20,26 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: $gray-text;
+
+  &::-webkit-scrollbar {
+    inline-size: 8px;
+    background-color: $white;
+
+    &-track {
+      border-radius: 8px;
+      background-color: hsla(0, 0%, 0%, 0.1);
+      border: 1px solid hsl(0, 0%, 80%);
+    }
+
+    &-thumb {
+      border-radius: 8px;
+      background: $green-medium;
+      border: 1px solid $green-dark;
+
+      &:hover,
+      &:active {
+        background: $green-dark;
+      }
+    }
+  }
 }

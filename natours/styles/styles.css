@@ -77,6 +77,19 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #787878; }
+  body::-webkit-scrollbar {
+    inline-size: 8px;
+    background-color: #f7f7f7; }
+    body::-webkit-scrollbar-track {
+      border-radius: 8px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border: 1px solid #cccccc; }
+    body::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      background: #54c47a;
+      border: 1px solid #27b485; }
+      body::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:active {
+        background: #27b485; }
 
 .heading-primary {
   color: #f7f7f7;
