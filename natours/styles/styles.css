@@ -153,6 +153,9 @@ body {
 .u-margin-bottom-small {
   margin-block-end: 1.6rem; }
 
+.u-margin-top-big {
+  margin-block-start: 8rem; }
+
 .btn:link, .btn:visited {
   position: relative;
   display: inline-block;
@@ -198,6 +201,12 @@ body {
   .btn--white::after {
     background-color: #f7f7f7; }
 
+.btn--green {
+  background: #54c47a;
+  color: #f7f7f7; }
+  .btn--green::after {
+    background: #27b485; }
+
 .btn--animated {
   -webkit-animation: moveInBottom 0.5s ease-out 0.75s;
   animation: moveInBottom 0.5s ease-out 0.75s;
@@ -226,6 +235,102 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
   -webkit-transform: translateY(0);
   transform: translateY(0); }
+
+.card {
+  position: relative;
+  perspective: 80rem;
+  padding: 2.4rem;
+  height: 56rem; }
+  .card__side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56rem;
+    border-radius: 4px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.16);
+    transition: transform 0.8s ease;
+    color: #27b485;
+    font-size: 2.4rem;
+    backface-visibility: hidden;
+    overflow: hidden; }
+    .card__side--front {
+      background-color: #f7f7f7; }
+    .card__side--back {
+      background-color: green;
+      transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background-image: linear-gradient(to right bottom, #ffbb00, #ff772e); }
+      .card__side--back--2 {
+        background-image: linear-gradient(to right bottom, #80d671, #27b485); }
+      .card__side--back--3 {
+        background-image: linear-gradient(to right bottom, #2997ff, #5442fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 48%;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #ffbb00, #ff772e), url("../assets/nat-5.jpg"); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #80d671, #27b485), url("../assets/nat-6.jpg"); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #2997ff, #5442fa), url("../assets/nat-7.jpg"); }
+  .card__heading {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #f7f7f7;
+    position: absolute;
+    top: 12rem;
+    right: 4rem;
+    text-align: right;
+    letter-spacing: 2px;
+    width: 72%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 187, 0, 0.8), rgba(255, 119, 46, 0.8)); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 151, 255, 0.8), rgba(84, 66, 250, 0.8)); }
+  .card__details {
+    padding: 3.2rem; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      color: #787878; }
+      .card__details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details ul li:not(:last-child) {
+          border-block-end: 1px solid #ededed; }
+  .card__cta {
+    position: absolute;
+    width: 88%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card__price-box {
+    text-align: center;
+    margin-block-end: 8rem;
+    color: #f7f7f7; }
+  .card__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6.4rem;
+    font-weight: 100; }
 
 .composition {
   position: relative; }
@@ -350,3 +455,9 @@ body {
   .section-features > * {
     -webkit-transform: skewY(4.8deg);
     transform: skewY(4.8deg); }
+
+.section-tours {
+  background-color: #f7f7f7;
+  padding: 24rem 0 16rem 0;
+  -webkit-margin-before: -8rem;
+  margin-block-start: -8rem; }
