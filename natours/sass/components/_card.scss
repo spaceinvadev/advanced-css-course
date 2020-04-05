@@ -1,5 +1,6 @@
 .card {
   position: relative;
+  -webkit-perspective: 80rem;
   perspective: 80rem;
   padding: 2.4rem;
   height: 56rem;
@@ -12,9 +13,13 @@
     height: 56rem;
     border-radius: 4px;
     box-shadow: 0 1.5rem 4rem hsla(0, 0%, 0%, 0.16);
+    -webkit-transition: -webkit-transform 0.8s ease;
+    transition: -webkit-transform 0.8s ease;
     transition: transform 0.8s ease;
+    transition: transform 0.8s ease, -webkit-transform 0.8s ease;
     color: $green-dark;
     font-size: 2.4rem;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
 
@@ -24,9 +29,17 @@
 
     &--back {
       background-color: green;
+      -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
 
       &--1 {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($yellow-light),
+          to($yellow-dark)
+        );
         background-image: linear-gradient(
           to right bottom,
           $yellow-light,
@@ -35,6 +48,13 @@
       }
 
       &--2 {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($green-light),
+          to($green-dark)
+        );
         background-image: linear-gradient(
           to right bottom,
           $green-light,
@@ -43,6 +63,13 @@
       }
 
       &--3 {
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($blue-light),
+          to($blue-dark)
+        );
         background-image: linear-gradient(
           to right bottom,
           $blue-light,
@@ -53,10 +80,12 @@
   }
 
   &:hover &__side--front {
+    -webkit-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
   }
 
   &:hover &__side--back {
+    -webkit-transform: rotateY(0);
     transform: rotateY(0);
   }
 
@@ -64,9 +93,18 @@
     background-size: cover;
     height: 48%;
     background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
 
     &--1 {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($yellow-light),
+          to($yellow-dark)
+        ),
+        url("../assets/nat-5.jpg");
       background-image: linear-gradient(
           to right bottom,
           $yellow-light,
@@ -76,6 +114,14 @@
     }
 
     &--2 {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($green-light),
+          to($green-dark)
+        ),
+        url("../assets/nat-6.jpg");
       background-image: linear-gradient(
           to right bottom,
           $green-light,
@@ -85,6 +131,14 @@
     }
 
     &--3 {
+      background-image: -webkit-gradient(
+          linear,
+          left top,
+          right bottom,
+          from($blue-light),
+          to($blue-dark)
+        ),
+        url("../assets/nat-7.jpg");
       background-image: linear-gradient(
           to right bottom,
           $blue-light,
@@ -113,6 +167,13 @@
     box-decoration-break: clone;
 
     &--1 {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from($yellow-light-80),
+        to($yellow-dark-80)
+      );
       background-image: linear-gradient(
         to right bottom,
         $yellow-light-80,
@@ -121,6 +182,13 @@
     }
 
     &--2 {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from($green-light-80),
+        to($green-dark-80)
+      );
       background-image: linear-gradient(
         to right bottom,
         $green-light-80,
@@ -129,6 +197,13 @@
     }
 
     &--3 {
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from($blue-light-80),
+        to($blue-dark-80)
+      );
       background-image: linear-gradient(
         to right bottom,
         $blue-light-80,
@@ -152,6 +227,7 @@
         padding: 1rem;
 
         &:not(:last-child) {
+          -webkit-border-after: 1px solid $gray-light-2;
           border-block-end: 1px solid $gray-light-2;
         }
       }
@@ -165,11 +241,13 @@
     text-align: center;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
 
   &__price-box {
     text-align: center;
+    -webkit-margin-after: 8rem;
     margin-block-end: 8rem;
     color: $white;
   }
