@@ -1,0 +1,87 @@
+.footer {
+  background-color: $gray-dark;
+  padding: 8rem 0;
+  font-size: 1.4rem;
+  color: $gray-light-1;
+
+  & .row {
+    padding: 0 4.8rem;
+  }
+
+  &__logo-box {
+    -moz-text-align-last: center;
+    text-align-last: center;
+    -webkit-margin-after: 8rem;
+    margin-block-end: 8rem;
+  }
+
+  &__logo {
+    width: 16rem;
+    height: auto;
+  }
+
+  &__navigation {
+    -webkit-border-before: 1px solid hsla(0, 0%, 100%, 0.04);
+    border-block-start: 1px solid hsla(0, 0%, 100%, 0.04);
+    -webkit-padding-before: 2rem;
+    padding-block-start: 2rem;
+    display: inline-block;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      -webkit-margin-end: 1.6rem;
+      margin-inline-end: 1.6rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $gray-light-1;
+      background-color: $gray-dark;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $green-medium;
+      box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.4);
+      -webkit-transform: rotate(-5deg) scale(1.3);
+      transform: rotate(-5deg) scale(1.3);
+    }
+  }
+
+  &__copyright {
+    -webkit-border-before: 1px solid hsla(0, 0%, 100%, 0.04);
+    border-block-start: 1px solid hsla(0, 0%, 100%, 0.04);
+    -webkit-padding-before: 2rem;
+    padding-block-start: 2rem;
+    width: 70%;
+    float: right;
+
+    & a {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $green-medium;
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s;
+      }
+
+      &:hover {
+        color: $green-dark;
+      }
+    }
+  }
+}
