@@ -1,10 +1,12 @@
 .form {
   &__group {
     &:not(:last-child) {
+      -webkit-margin-after: 0.8rem;
       margin-block-end: 0.8rem;
     }
 
     &:nth-child(4) {
+      -webkit-margin-after: 4rem;
       margin-block-end: 4rem;
     }
   }
@@ -17,18 +19,22 @@
     border-radius: 2px;
     background-color: $white-64;
     border: none;
+    -webkit-border-after: 3px solid transparent;
     border-block-end: 3px solid transparent;
     width: 90%;
     color: inherit;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
 
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.1);
+      -webkit-border-after: 3px solid $green-medium;
       border-block-end: 3px solid $green-medium;
     }
 
     &:focus:invalid {
+      -webkit-border-after: 3px solid $yellow-dark;
       border-block-end: 3px solid $yellow-dark;
     }
 
@@ -39,6 +45,7 @@
     &:placeholder-shown + .form__label {
       opacity: 0;
       visibility: hidden;
+      -webkit-transform: translateY(-4rem);
       transform: translateY(-4rem);
     }
   }
@@ -46,9 +53,12 @@
   &__label {
     font-size: 1.2rem;
     font-weight: 700;
+    -webkit-margin-start: 2.4rem;
     margin-inline-start: 2.4rem;
+    -webkit-margin-before: 0.7rem;
     margin-block-start: 0.7rem;
     display: block;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
 
@@ -65,6 +75,7 @@
     font-size: $body-font-size;
     cursor: pointer;
     position: relative;
+    -webkit-padding-start: 4rem;
     padding-inline-start: 4rem;
   }
 
@@ -87,9 +98,11 @@
       position: absolute;
       top: 50%;
       left: 50%;
+      -webkit-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
       background-color: $green-medium;
       opacity: 0;
+      -webkit-transition: opacity 0.3s;
       transition: opacity 0.3s;
     }
   }
