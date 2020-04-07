@@ -29,19 +29,29 @@
       <nav class="navigation__menu">
         <ul class="navigation__menu__list">
           <li class="navigation__menu__item">
-            <a href="#" class="navigation__menu__link"><span>01</span>About Natours</a>
+            <a href="#" class="navigation__menu__link"
+              ><span>01</span>About Natours</a
+            >
           </li>
           <li class="navigation__menu__item">
-            <a href="#" class="navigation__menu__link"><span>02</span>Your benefits</a>
+            <a href="#" class="navigation__menu__link"
+              ><span>02</span>Your benefits</a
+            >
           </li>
           <li class="navigation__menu__item">
-            <a href="#" class="navigation__menu__link"><span>03</span>Popular tours</a>
+            <a href="#" class="navigation__menu__link"
+              ><span>03</span>Popular tours</a
+            >
           </li>
           <li class="navigation__menu__item">
-            <a href="#" class="navigation__menu__link"><span>04</span>Stories</a>
+            <a href="#" class="navigation__menu__link"
+              ><span>04</span>Stories</a
+            >
           </li>
           <li class="navigation__menu__item">
-            <a href="#" class="navigation__menu__link"><span>05</span>Book now</a>
+            <a href="#" class="navigation__menu__link"
+              ><span>05</span>Book now</a
+            >
           </li>
         </ul>
       </nav>
@@ -243,7 +253,7 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Most popular tours
@@ -277,7 +287,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#modal" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -309,7 +319,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$497</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#modal" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -341,7 +351,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$897</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#modal" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -537,6 +547,44 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal" id="modal">
+      <div class="modal__content">
+        <div class="modal__content__left">
+          <img
+            class="modal__content__picture"
+            src="./assets/nat-8.jpg"
+            alt="Tour photo"
+          />
+          <img
+            class="modal__content__picture"
+            src="./assets/nat-9.jpg"
+            alt="Tour photo"
+          />
+        </div>
+
+        <div class="modal__content__right">
+          <a href="#section-tours" class="modal__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">
+            Start booking now
+          </h2>
+          <p class="modal__text u-margin-bottom-medium">
+            Eos quidem in inventore et doloribus qui. Ut aspernatur incidunt
+            repudiandae recusandae nam odio ex dolor distinctio. Accusantium et
+            maiores provident consequatur expedita iste. Voluptatem deserunt
+            inventore. Nemo illo culpa aspernatur aut est et quae ad voluptate.
+            Modi sint nostrum est. Odit sed unde nisi.
+          </p>
+          <p class="modal__disclaimer u-margin-bottom-medium">
+            Important &ndash; By booking, you accept our
+            <a class="modal__disclaimer__terms" href="#"
+              >Terms & Conditions of Service</a
+            >.
+          </p>
+          <a href="#" class="btn btn--green">Book now</a>
+        </div>
+      </div>
+    </div>
 
     <!-- <section class="grid-test">
       <div class="row">

@@ -1,0 +1,108 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 64;
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(0, 0%, 0%, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      color: $gray-dark;
+      position: absolute;
+      top: 2.4rem;
+      right: 2.4rem;
+      font-size: 3.2rem;
+      line-height: 1;
+      text-decoration: none;
+      display: inline-block;
+      -webkit-transition: color 0.2s;
+      transition: color 0.2s;
+    }
+
+    &:hover {
+      color: $green-medium;
+    }
+  }
+
+  &__content {
+    width: 88%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(0.25);
+    transform: translate(-50%, -50%) scale(0.25);
+    opacity: 0;
+    background-color: $white-90;
+    border-radius: 4px;
+    box-shadow: 0 2rem 4rem hsla(0, 0%, 0%, 0.2);
+    display: table;
+    overflow: hidden;
+    -webkit-transition: all 0.4s 0.2s;
+    transition: all 0.4s 0.2s;
+
+    &__left {
+      width: 33.3333%;
+      display: table-cell;
+    }
+
+    &__right {
+      width: 66.6667%;
+      display: table-cell;
+      vertical-align: middle;
+      padding: 3.2rem 5.6rem;
+    }
+
+    &__picture {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 4rem;
+    -moz-column-gap: 4rem;
+    column-gap: 4rem;
+    -webkit-column-rule: 1px solid hsla(0, 0%, 0%, 0.05);
+    -moz-column-rule: 1px solid hsla(0, 0%, 0%, 0.05);
+    column-rule: 1px solid hsla(0, 0%, 0%, 0.05);
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+
+  &__disclaimer__terms {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $green-medium;
+      -webkit-transition: color 0.2s;
+      transition: color 0.2s;
+    }
+
+    &:hover {
+      color: $green-dark;
+    }
+  }
+}
