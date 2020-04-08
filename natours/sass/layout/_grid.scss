@@ -4,6 +4,10 @@
 
   &:not(:last-child) {
     margin-block-end: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-block-end: $gutter-vertical-small;
+    }
   }
 
   @include clearfix;
@@ -13,6 +17,15 @@
 
     &:not(:last-child) {
       margin-inline-end: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-inline-end: 0;
+        margin-block-end: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
 
@@ -40,5 +53,9 @@
       100% - #{$gutter-horizontal} - calc((100% - (#{$gutter-horizontal}) * 3) /
             4)
     );
+  }
+
+  @include respond(tab-port) {
+    max-width: 64%;
   }
 }

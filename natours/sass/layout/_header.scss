@@ -37,4 +37,9 @@
     backface-visibility: hidden;
     text-align: center;
   }
+
+  @include respond(tab-port) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 86vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 86vh, 0 100%);
+  }
 }

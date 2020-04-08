@@ -6,6 +6,14 @@
 
   & .row {
     padding: 0 4.8rem;
+
+    @include respond(tab-port) {
+      max-width: 64%;
+    }
+
+    @include respond(phone) {
+      max-width: 80%;
+    }
   }
 
   &__logo-box {
@@ -13,6 +21,11 @@
     text-align-last: center;
     -webkit-margin-after: 8rem;
     margin-block-end: 8rem;
+
+    @include respond(tab-port) {
+      -webkit-margin-after: 4.8rem;
+      margin-block-end: 4.8rem;
+    }
   }
 
   &__logo {
@@ -26,6 +39,13 @@
     -webkit-padding-before: 2rem;
     padding-block-start: 2rem;
     display: inline-block;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+      -webkit-border-before: none;
+      border-block-start: none;
+    }
   }
 
   &__list {
@@ -83,5 +103,24 @@
         color: $green-dark;
       }
     }
+
+    @include respond(tab-port) {
+      -webkit-border-before: none;
+      border-block-start: none;
+      -webkit-padding-before: 0;
+      padding-block-start: 0;
+      width: 100%;
+      float: none;
+      text-align: center;
+    }
+
+    @include respond(phone) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  @include respond(tab-port) {
+    padding: 6rem 0;
   }
 }

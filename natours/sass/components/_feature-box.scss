@@ -23,9 +23,17 @@
     display: block;
     width: 6.4rem;
     height: 6.4rem;
+
+    @include respond(tab-port) {
+      margin: 0 auto 2rem auto;
+    }
   }
 
   &__desc {
     font-size: 1.4rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 2rem;
   }
 }

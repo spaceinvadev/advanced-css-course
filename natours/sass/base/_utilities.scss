@@ -4,10 +4,18 @@
 
 .u-margin-bottom-big {
   margin-block-end: 8rem;
+
+  @include respond(tab-port) {
+    margin-block-end: 4.8rem;
+  }
 }
 
 .u-margin-bottom-medium {
   margin-block-end: 4rem;
+
+  @include respond(tab-port) {
+    margin-block-end: 3.2rem;
+  }
 }
 
 .u-margin-bottom-small {
@@ -16,4 +24,8 @@
 
 .u-margin-top-big {
   margin-block-start: 8rem;
+
+  @include respond(phone) {
+    margin-block-start: 4rem;
+  }
 }

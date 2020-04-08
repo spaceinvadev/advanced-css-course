@@ -24,6 +24,12 @@
     backface-visibility: hidden;
     position: relative;
     overflow: hidden;
+
+    @include respond(phone) {
+      -webkit-transform: skewX(0);
+      transform: skewX(0);
+      margin-inline-end: 3rem;
+    }
   }
 
   &__image {
@@ -41,6 +47,11 @@
     transform: skewX(12deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+
+    @include respond(phone) {
+      -webkit-transform: skewX(0);
+      transform: skewX(0);
+    }
   }
 
   &__caption {
@@ -72,5 +83,17 @@
     transform: translateX(-4rem) scale(1);
     -webkit-filter: blur(3px) brightness(88%);
     filter: blur(3px) brightness(88%);
+  }
+
+  @include respond(tab-port) {
+    width: 100%;
+    -webkit-padding-start: 8rem;
+    padding-inline-start: 8rem;
+  }
+
+  @include respond(phone) {
+    padding: 3.2rem 3.2rem 2.4rem 3.2rem;
+    -webkit-transform: skewX(0);
+    transform: skewX(0);
   }
 }
