@@ -778,13 +778,14 @@ body {
     backface-visibility: hidden;
     text-align: center; }
 
-.navigation__checkbox:checked ~ .navigation__background {
-  -webkit-transform: scale(88);
-  transform: scale(88); }
-
-.navigation__checkbox:checked ~ .navigation__menu {
-  width: 100%;
-  opacity: 1; }
+.navigation__checkbox {
+  display: none; }
+  .navigation__checkbox:checked ~ .navigation__background {
+    -webkit-transform: scale(88);
+    transform: scale(88); }
+  .navigation__checkbox:checked ~ .navigation__menu {
+    width: 100%;
+    opacity: 1; }
 
 .navigation__button {
   position: fixed;

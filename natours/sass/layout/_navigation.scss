@@ -1,5 +1,7 @@
 .navigation {
   &__checkbox {
+    display: none;
+
     &:checked ~ .navigation__background {
       -webkit-transform: scale(88);
       transform: scale(88);
