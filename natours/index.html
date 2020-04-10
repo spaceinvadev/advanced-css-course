@@ -504,11 +504,23 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img
-          src="./assets/logo-green-2x.png"
-          alt="Natours Logo in green"
-          class="footer__logo"
-        />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              ./assets/logo-green-small-1x.png 1x,
+              ./assets/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5em)"
+          />
+          <img
+            srcset="
+              ./assets/logo-green-1x.png 1x,
+              ./assets/logo-green-2x.png 2x
+            "
+            alt="Natours Logo in green"
+            class="footer__logo"
+          />
+        </picture>
       </div>
 
       <div class="row">
