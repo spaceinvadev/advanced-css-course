@@ -8,13 +8,26 @@
       from($green-light-80),
       to($green-dark-80)
     ),
-    url("../assets/hero.jpg");
+    url("../assets/hero-small.jpg");
   background-image: linear-gradient(to right, $green-light-80, $green-dark-80),
-    url("../assets/hero.jpg");
+    url("../assets/hero-small.jpg");
   background-size: cover;
   background-position: center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from($green-light-80),
+        to($green-dark-80)
+      ),
+      url("../assets/hero.jpg");
+    background-image: linear-gradient(to right, $green-light-80, $green-dark-80),
+      url("../assets/hero.jpg");
+  }
 
   &__logo {
     position: absolute;

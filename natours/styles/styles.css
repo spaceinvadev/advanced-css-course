@@ -938,12 +938,16 @@ body {
 .header {
   position: relative;
   height: 96vh;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(128, 214, 113, 0.8)), to(rgba(39, 180, 133, 0.8))), url("../assets/hero.jpg");
-  background-image: linear-gradient(to right, rgba(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)), url("../assets/hero.jpg");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(128, 214, 113, 0.8)), to(rgba(39, 180, 133, 0.8))), url("../assets/hero-small.jpg");
+  background-image: linear-gradient(to right, rgba(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)), url("../assets/hero-small.jpg");
   background-size: cover;
   background-position: center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: -webkit-gradient(linear, left top, right top, from(rgba(128, 214, 113, 0.8)), to(rgba(39, 180, 133, 0.8))), url("../assets/hero.jpg");
+      background-image: linear-gradient(to right, rgba(128, 214, 113, 0.8), rgba(39, 180, 133, 0.8)), url("../assets/hero.jpg"); } }
   .header__logo {
     position: absolute;
     top: 4rem;
