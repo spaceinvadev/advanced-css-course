@@ -1,0 +1,45 @@
+:root {
+  --fucsia: hsl(343, 82%, 55%); // #eb2f64
+  --fucsia-light: hsl(345, 100%, 60%); // #f36
+  --fucsia-dark: hsl(338, 66%, 44%); // #ba265d
+
+  --gray-light-1: hsl(0, 9%, 98%); // #faf9f9
+  --gray-light-2: hsl(0, 8%, 95%); // #f4f2f2
+  --gray-light-3: hsl(0, 6%, 94%); // #f0eeee
+  --gray-light-4: hsl(0, 0%, 80%); // #ccc
+
+  --gray-dark-1: hsl(0, 0%, 20%); // #333
+  --gray-dark-2: hsl(0, 0%, 47%); // #777
+  --gray-dark-3: hsl(0, 0%, 60%); // #999
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--gray-dark-1);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--fucsia-light),
+    var(--fucsia-dark)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
