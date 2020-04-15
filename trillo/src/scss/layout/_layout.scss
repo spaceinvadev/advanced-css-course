@@ -73,7 +73,7 @@
       }
 
       & span {
-        color: var(--white);
+        color: var(--gray-light-3);
         font-weight: 300;
         font-size: 1.4rem;
         text-transform: uppercase;
@@ -86,13 +86,13 @@
   &__icon {
     height: 1.8rem;
     width: 1.8rem;
-    fill: var(--white);
+    fill: var(--gray-light-3);
     margin-inline-end: 1rem;
     z-index: 10;
   }
 
   &__legal {
-    color: var(--white);
+    color: var(--gray-light-4);
     font-size: 1.3rem;
     line-height: 1.5;
     text-align: center;
