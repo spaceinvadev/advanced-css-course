@@ -1,0 +1,88 @@
+.search-form {
+  padding: 0.4rem 1.2rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--gray-light-2);
+  border-radius: 4px;
+  height: auto;
+  margin-inline-start: 15%;
+
+  &__input {
+    height: 3.2rem;
+    width: 25.6rem;
+    background-color: inherit;
+    border: none;
+    font-family: "Rubik", sans-serif;
+    color: var(--gray-dark-1);
+
+    &::placeholder {
+      font-family: inherit;
+    }
+  }
+
+  &__button {
+    border: none;
+    background-color: var(--gray-light-2);
+    cursor: pointer;
+    @include flex-abs-center;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--gray-dark-2);
+  }
+}
+
+.user-nav {
+  list-style: none;
+  @include flex-abs-center;
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+
+    &:not(:last-of-type) {
+      padding: 2px 1px;
+      margin-inline-end: 0.4rem;
+      @include flex-abs-center;
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.8rem;
+    fill: var(--gray-dark-1);
+  }
+
+  &__stats {
+    @include flex-abs-center;
+    font-size: 0.9rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.4rem;
+    background-color: var(--fucsia);
+    color: var(--white);
+    z-index: 8;
+    border-radius: 100%;
+  }
+
+  &__profile {
+    @include flex-abs-center;
+    padding-inline-start: 1rem;
+
+    & img {
+      height: 4rem;
+      border-radius: 50%;
+      margin-inline-end: 0.8rem;
+    }
+
+    & span {
+      font-size: 1.4rem;
+      color: var(--gray-dark-2);
+    }
+  }
+}
