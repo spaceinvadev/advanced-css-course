@@ -25,8 +25,80 @@
 }
 
 .sidebar {
+  min-height: 48rem;
+  padding: 5.6rem 0 1.6rem 0;
   background-color: var(--gray-dark-1);
   flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      height: 5.6rem;
+      padding: 1rem 1.6rem;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+
+      &:not(:last-of-type) {
+        margin-block-end: 0.8rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--fucsia);
+        transform: scaleY(0);
+        transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s;
+        transform-origin: center;
+      }
+
+      &:hover::before {
+        transform: scaleY(1);
+        width: 100%;
+      }
+
+      &--active {
+        background-color: var(--fucsia);
+      }
+
+      & span {
+        color: var(--white);
+        font-weight: 300;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        z-index: 10;
+      }
+    }
+  }
+
+  &__icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: var(--white);
+    margin-inline-end: 1rem;
+    z-index: 10;
+  }
+
+  &__legal {
+    color: var(--white);
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 80%;
+    align-self: center;
+  }
 }
 
 .hotel-view {
