@@ -86,3 +86,148 @@
     }
   }
 }
+
+.movie-gallery {
+  display: flex;
+
+  &__item {
+    width: calc(100% / 3);
+    height: 20rem;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+}
+
+.movie-critics {
+  list-style: none;
+}
+
+.movie-critic {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    margin-block-end: 2.4rem;
+  }
+}
+
+.metascore-score {
+  font-size: 2rem;
+  padding: 0.4rem;
+  background: var(--fucsia);
+  color: var(--white);
+  width: 4.8rem;
+  height: 4.8rem;
+  @include flex-abs-center;
+  margin-inline-end: 1rem;
+}
+
+.metascore-info {
+  &__title {
+    font-size: 1.5rem;
+    display: block;
+    line-height: 1;
+    margin-block-end: 0.8rem;
+  }
+
+  &__desc {
+    font-size: 1.2rem;
+    display: block;
+    line-height: 1;
+
+    & a:link,
+    & a:visited {
+      color: var(--fucsia);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.reviews {
+  &__icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    padding: 1.2rem;
+    background: var(--fucsia);
+    fill: var(--white);
+    margin-inline-end: 1rem;
+  }
+}
+
+.reviews__info {
+  &__title {
+    font-size: 1.5rem;
+    display: block;
+    line-height: 1;
+    margin-block-end: 0.8rem;
+  }
+
+  &__desc {
+    font-size: 1.2rem;
+    display: block;
+    line-height: 1;
+  }
+}
+
+.popularity {
+  &__icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    padding: 1.2rem;
+    background: var(--fucsia);
+    fill: var(--white);
+    margin-inline-end: 1rem;
+  }
+}
+
+.popularity__info {
+  &__title {
+    font-size: 1.5rem;
+    display: block;
+    line-height: 1;
+    margin-block-end: 0.8rem;
+  }
+
+  &__desc {
+    font-size: 1.2rem;
+    display: block;
+    line-height: 1;
+  }
+}
+
+.cta {
+  @include flex-abs-center;
+  padding: 1.2rem 2rem;
+  width: 25.6rem;
+  background: var(--fucsia);
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &__text {
+    color: var(--white);
+    font-size: 1.6rem;
+    margin: 0 1rem;
+  }
+
+  &__icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    fill: var(--white);
+  }
+
+  &:hover {
+    background: var(--fucsia-dark);
+  }
+}

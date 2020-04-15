@@ -212,3 +212,37 @@
     padding-top: 0.8rem;
   }
 }
+
+.movie-meta {
+  padding: 2.4rem 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &__plot {
+    width: 88%;
+    margin-block-end: 1.6rem;
+  }
+}
+
+.movie-credits {
+  flex: 0 0 80%;
+}
+
+.movie-credits-list {
+  list-style: none;
+  margin-block-end: 2.4rem;
+}
+
+.movie-credit {
+  padding: 0.2rem 0;
+
+  & a:link,
+  & a:visited {
+    color: var(--fucsia);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
