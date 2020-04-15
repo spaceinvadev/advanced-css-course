@@ -9,7 +9,7 @@
   height: 8rem;
   background-color: var(--white);
   border-bottom: 1px solid var(--gray-light-2);
-  padding: 0 2.4rem;
+  padding: 0 2.4rem 0 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,7 +109,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 2.4rem 3.2rem;
+    padding: 3.2rem;
   }
 }
 
@@ -118,7 +118,7 @@
     display: flex;
     align-items: baseline;
     line-height: 1;
-    margin-block-end: 0.8rem;
+    margin-block-end: 1.6rem;
 
     &--title {
       margin-inline-end: 1rem;
@@ -140,9 +140,14 @@
 
   &__original-title {
     color: var(--gray-dark-2);
-    margin-block-end: 0.8rem;
-    font-size: 1.5rem;
+    margin-block-end: 1.2rem;
+    font-size: 1.6rem;
     padding-inline-start: 3px;
+
+    & span {
+      font-size: 1.3rem;
+      color: var(--gray-dark-3);
+    }
   }
 
   &__misc-details {
@@ -236,6 +241,7 @@
 
 .movie-credit {
   padding: 0.2rem 0;
+  margin-block-end: 0.3rem;
 
   & a:link,
   & a:visited {
