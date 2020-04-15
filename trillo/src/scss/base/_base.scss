@@ -47,6 +47,28 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
+
+  &::-webkit-scrollbar {
+    inline-size: 8px;
+    background-color: var(--white);
+
+    &-track {
+      border-radius: 8px;
+      background-color: hsla(0, 0%, 0%, 0.1);
+      border: 1px solid hsl(0, 0%, 80%);
+    }
+
+    &-thumb {
+      border-radius: 8px;
+      background: var(--fucsia-light);
+      border: 1px solid var(--fucsia-dark);
+
+      &:hover,
+      &:active {
+        background: var(--fucsia-dark);
+      }
+    }
+  }
 }
 
 a {
