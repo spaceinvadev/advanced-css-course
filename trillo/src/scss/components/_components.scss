@@ -105,6 +105,7 @@
 .movie-critics {
   list-style: none;
   flex: 0 0 23%;
+  margin-block-end: 1.6rem;
 }
 
 .movie-critic {
@@ -230,5 +231,54 @@
 
   &:hover {
     background: var(--fucsia-dark);
+  }
+}
+
+// Alternate list
+.alt-list {
+  width: 64%;
+  margin-block-end: 0;
+  list-style: none;
+
+  &__item {
+    margin-inline-start: 2.4rem;
+    position: relative;
+
+    & span {
+      font-weight: 500;
+    }
+
+    &:not(:last-of-type) {
+      margin-block-end: 1.6rem;
+    }
+
+    &::before {
+      content: "\BB";
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-inline-start: -1.6rem;
+      color: var(--fucsia);
+    }
+
+    & a:link,
+    & a:visited {
+      color: var(--fucsia);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.cta-inline {
+  &:link,
+  &:visited {
+    color: var(--fucsia);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

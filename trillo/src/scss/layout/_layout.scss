@@ -219,10 +219,10 @@
 }
 
 .movie-meta {
-  padding: 2.4rem 3.2rem;
+  padding: 3.2rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
 
   &__plot {
     width: 92%;
@@ -236,12 +236,11 @@
 
 .movie-credits-list {
   list-style: none;
-  margin-block-end: 2.4rem;
 }
 
 .movie-credit {
   padding: 0.2rem 0;
-  margin-block-end: 0.3rem;
+  margin-block-end: 0.8rem;
 
   & a:link,
   & a:visited {
@@ -250,5 +249,30 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+.tech-specs {
+  padding: 3.2rem;
+  background: var(--gray-light-2);
+
+  &__title {
+    margin-block-end: 1.6rem;
+  }
+}
+
+.box-office {
+  padding: 3.2rem;
+
+  &__title {
+    margin-block-end: 1.6rem;
+  }
+
+  & .alt-list__item {
+    margin-block-end: 1.6rem;
+  }
+
+  & > .alt-list > .cta-inline {
+    margin-inline-start: 2.4rem;
   }
 }
