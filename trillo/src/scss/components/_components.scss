@@ -205,32 +205,59 @@
 }
 
 .cta {
-  @include flex-abs-center;
-  padding: 1.2rem 2rem;
   width: 25.6rem;
-  background: var(--fucsia);
+  margin: 0 auto;
+  display: block;
+  background-image: linear-gradient(
+    to right,
+    var(--fucsia-light),
+    var(--fucsia-dark)
+  );
   font-family: "Rubik", sans-serif;
-  font-weight: 400;
   line-height: 1;
   border: none;
-  border-radius: 4px;
+  border-radius: 32px;
+  color: var(--white);
+  font-size: 1.4rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
 
-  &__text {
-    color: var(--white);
-    font-size: 1.6rem;
-    margin: 0 1rem;
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s;
   }
 
-  &__icon {
-    width: 2.2rem;
-    height: 2.2rem;
-    fill: var(--white);
+  &__text-visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__text-invisible {
+    position: absolute;
+    padding: 2rem 0;
+    left: 0;
+    top: -100%;
   }
 
   &:hover {
-    background: var(--fucsia-dark);
+    background-image: linear-gradient(
+      to left,
+      var(--fucsia-light),
+      var(--fucsia-dark)
+    );
+  }
+
+  &:hover &__text-visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__text-invisible {
+    top: 0;
   }
 }
 
