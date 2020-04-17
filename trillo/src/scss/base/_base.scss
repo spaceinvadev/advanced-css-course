@@ -82,6 +82,10 @@ a {
   @media screen and (max-width: $bp-tablet) {
     font-size: 4rem;
   }
+
+  @media screen and (max-width: $bp-phone-xl) {
+    font-size: 3.4rem;
+  }
 }
 
 .heading-2 {
@@ -90,6 +94,10 @@ a {
 
   @media screen and (max-width: $bp-tablet) {
     font-size: 2.8rem;
+  }
+
+  @media screen and (max-width: $bp-phone-xl) {
+    font-size: 2.4rem;
   }
 }
 
@@ -102,5 +110,9 @@ a {
 
   @media screen and (max-width: $bp-tablet) {
     font-size: 2rem;
+  }
+
+  @media screen and (max-width: $bp-phone-xl) {
+    font-size: 1.8rem;
   }
 }

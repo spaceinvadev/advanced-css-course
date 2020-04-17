@@ -14,13 +14,31 @@
   justify-content: space-between;
   align-items: center;
 
+  @media screen and (max-width: $bp-medium) {
+    height: 9.6rem;
+  }
+
+  @media screen and (max-width: $bp-tablet-xs) {
+    height: 8rem;
+    padding: 0 1.6rem 0 2.4rem;
+  }
+
+  @media screen and (max-width: $bp-phone-xl) {
+    height: 7.2rem;
+    padding: 0 2.4rem 0 3.2rem;
+  }
+
+  @media screen and (max-width: $bp-phone-s) {
+    padding: 0 2.4rem;
+  }
+
   &__logo {
     display: inline-block;
     height: 3.2rem;
-  }
 
-  @media screen and (max-width: $bp-medium) {
-    height: 9.6rem;
+    @media screen and (max-width: $bp-tablet-xs) {
+      height: 2.6rem;
+    }
   }
 }
 
@@ -54,8 +72,27 @@
       cursor: pointer;
       position: relative;
 
+      @media screen and (max-width: $bp-medium) {
+        flex: 0 0 25%;
+        justify-content: center;
+        align-items: center;
+        margin-block-end: 0;
+      }
+
+      @media screen and (max-width: $bp-tablet-xs) {
+        height: 4.8rem;
+      }
+
+      @media screen and (max-width: $bp-phone-x) {
+        padding: 0.8rem;
+      }
+
       &:not(:last-of-type) {
         margin-block-end: 0.8rem;
+
+        @media screen and (max-width: $bp-medium) {
+          margin-block-end: 0;
+        }
       }
 
       &::before {
@@ -69,11 +106,23 @@
         transform: scaleY(0);
         transition: transform 0.2s, width 0.3s cubic-bezier(1, 0, 0, 1) 0.2s;
         transform-origin: center;
+
+        @media screen and (max-width: $bp-tablet) {
+          bottom: 0;
+          height: 3px;
+          width: 10%;
+          transform-origin: bottom;
+          transition: transform 0.2s, height 0.3s cubic-bezier(1, 0, 0, 1) 0.2s;
+        }
       }
 
       &:hover::before {
         transform: scaleY(1);
         width: 100%;
+
+        @media screen and (max-width: $bp-tablet) {
+          height: 100%;
+        }
       }
 
       &--active {
@@ -91,13 +140,11 @@
         @media screen and (max-width: $bp-tablet) {
           font-size: 1.3rem;
         }
-      }
 
-      @media screen and (max-width: $bp-medium) {
-        flex: 0 0 25%;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
+        @media screen and (max-width: $bp-phone) {
+          letter-spacing: 0.5px;
+          font-size: 1.2rem;
+        }
       }
     }
 
@@ -105,6 +152,10 @@
       flex: 0 0 100%;
       flex-direction: row;
       height: 5.6rem;
+    }
+
+    @media screen and (max-width: $bp-tablet-xs) {
+      height: 4.8rem;
     }
   }
 
@@ -118,6 +169,10 @@
     @media screen and (max-width: $bp-tablet) {
       height: 1.4rem;
       width: 1.48rem;
+    }
+
+    @media screen and (max-width: $bp-tablet-xs) {
+      display: none;
     }
   }
 
@@ -141,6 +196,10 @@
     padding: 0;
     min-height: 5.6rem;
   }
+
+  @media screen and (max-width: $bp-tablet-xs) {
+    min-height: 4.8rem;
+  }
 }
 
 .movie {
@@ -152,10 +211,27 @@
     justify-content: space-between;
     align-items: flex-end;
     padding: 3.2rem;
+
+    @media screen and (max-width: $bp-phone-xl) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media screen and (max-width: $bp-phone-xl) {
+      padding: 2.4rem 3.2rem;
+    }
+
+    @media screen and (max-width: $bp-phone-s) {
+      padding: 2.4rem;
+    }
   }
 }
 
 .movie-info {
+  @media screen and (max-width: $bp-phone-xl) {
+    margin-block-end: 1.6rem;
+  }
+
   &__title {
     display: flex;
     align-items: baseline;
@@ -164,10 +240,22 @@
 
     &--title {
       margin-inline-end: 1rem;
+
+      @media screen and (max-width: $bp-phone-xl) {
+        margin-inline-end: 0.6rem;
+      }
     }
 
     &--year {
       font-size: 2.6rem;
+
+      @media screen and (max-width: $bp-tablet) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: $bp-phone-xl) {
+        font-size: 1.4rem;
+      }
 
       & a:link,
       & a:visited {
@@ -177,10 +265,10 @@
           color: var(--fucsia);
         }
       }
+    }
 
-      @media screen and (max-width: $bp-tablet) {
-        font-size: 2rem;
-      }
+    @media screen and (max-width: $bp-tablet-xs) {
+      margin-block-end: 0.8rem;
     }
   }
 
@@ -189,6 +277,15 @@
     margin-block-end: 1.2rem;
     font-size: 1.6rem;
     padding-inline-start: 3px;
+
+    @media screen and (max-width: $bp-tablet-xs) {
+      font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: $bp-phone-xl) {
+      font-size: 1.4rem;
+      margin-block-end: 0.8rem;
+    }
 
     & span {
       font-size: 1.3rem;
@@ -202,6 +299,10 @@
     line-height: 1.1;
     padding-inline-start: 3px;
     color: var(--gray-dark-2);
+
+    @media screen and (max-width: $bp-phone) {
+      font-size: 1.2rem;
+    }
   }
 
   &__detail {
@@ -211,6 +312,16 @@
       padding-right: 1.2rem;
       margin-inline-end: 1.2rem;
       border-right: 1px solid var(--gray-dark-3);
+
+      @media screen and (max-width: $bp-tablet-xs) {
+        padding-right: 0.8rem;
+        margin-inline-end: 0.8rem;
+      }
+
+      @media screen and (max-width: $bp-phone) {
+        padding-right: 0.5rem;
+        margin-inline-end: 0.5rem;
+      }
     }
 
     & a:link,
@@ -229,9 +340,23 @@
   flex-direction: column;
   align-items: center;
 
+  @media screen and (max-width: $bp-phone-xl) {
+    flex-direction: row;
+    align-items: center;
+  }
+
   &__top {
     @include flex-abs-center;
     margin-block-end: 0.8rem;
+
+    @media screen and (max-width: $bp-tablet-xs) {
+      margin-block-end: 0.6rem;
+    }
+
+    @media screen and (max-width: $bp-phone-xl) {
+      margin-block-end: 0;
+      margin-inline-end: 1.3rem;
+    }
   }
 
   &__icon {
@@ -239,6 +364,13 @@
     height: 2.4rem;
     fill: var(--fucsia);
     margin-inline-end: 1rem;
+
+    @media screen and (max-width: $bp-tablet-xs) {
+      width: 2rem;
+      height: 2rem;
+      margin-inline-end: 0.6rem;
+      margin-block-end: 0.25rem;
+    }
   }
 
   &__score {
@@ -249,18 +381,43 @@
     &--own {
       font-size: 3.2rem;
       font-weight: 300;
+
+      @media screen and (max-width: $bp-tablet-xs) {
+        font-size: 2.8rem;
+      }
+
+      @media screen and (max-width: $bp-phone-xl) {
+        font-size: 2.2rem;
+      }
     }
 
     &--top {
       font-size: 1.3rem;
       color: var(--gray-dark-3);
+
+      @media screen and (max-width: $bp-tablet-xs) {
+        font-size: 1.1rem;
+      }
     }
   }
 
   &__votes {
     font-size: 1.3rem;
     border-top: 1px solid var(--gray-light-3);
-    padding-top: 0.8rem;
+    padding-block-start: 0.8rem;
+
+    @media screen and (max-width: $bp-tablet-xs) {
+      font-size: 1.1rem;
+      padding-block-start: 0.6rem;
+    }
+
+    @media screen and (max-width: $bp-phone-xl) {
+      padding-block-start: 0;
+      border-top: none;
+      border-left: 1px solid var(--gray-dark-3);
+      padding-inline-start: 1.3rem;
+      line-height: 1;
+    }
   }
 }
 
@@ -270,14 +427,27 @@
   justify-content: space-between;
   align-items: flex-end;
 
-  &__plot {
-    width: 92%;
-    margin-block-end: 1.6rem;
-  }
-
   @media screen and (max-width: $bp-tablet) {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  @media screen and (max-width: $bp-phone-xl) {
+    padding: 3.2rem;
+    font-size: 1.4rem;
+  }
+
+  @media screen and (max-width: $bp-phone-s) {
+    padding: 2.4rem;
+  }
+
+  &__plot {
+    width: 92%;
+    margin-block-end: 1.6rem;
+
+    @media screen and (max-width: $bp-phone) {
+      width: 100%;
+    }
   }
 }
 
@@ -286,6 +456,14 @@
 
   @media screen and (max-width: $bp-tablet) {
     margin-block-end: 3.2rem;
+  }
+
+  @media screen and (max-width: $bp-phone-xl) {
+    margin-block-end: 2.4rem;
+  }
+
+  @media screen and (max-width: $bp-phone-xs) {
+    margin-block-end: 2rem;
   }
 }
 
@@ -311,6 +489,14 @@
   padding: 4.8rem 3.2rem 5.6rem 3.2rem;
   background: var(--gray-light-2);
 
+  @media screen and (max-width: $bp-phone-xl) {
+    padding: 4rem 3.2rem 4.8rem 3.2rem;
+  }
+
+  @media screen and (max-width: $bp-phone-s) {
+    padding: 2.4rem;
+  }
+
   &__title {
     margin-block-end: 1.6rem;
   }
@@ -318,6 +504,14 @@
 
 .box-office {
   padding: 4.8rem 3.2rem 5.6rem 3.2rem;
+
+  @media screen and (max-width: $bp-phone-xl) {
+    padding: 4rem 3.2rem 4.8rem 3.2rem;
+  }
+
+  @media screen and (max-width: $bp-phone-s) {
+    padding: 2.4rem;
+  }
 
   &__title {
     margin-block-end: 1.6rem;
@@ -336,7 +530,19 @@
   padding: 4.8rem 3.2rem;
   background: var(--gray-light-1);
 
+  @media screen and (max-width: $bp-phone-xl) {
+    padding: 4rem 2.4rem;
+  }
+
+  @media screen and (max-width: $bp-phone-s) {
+    padding: 2.4rem;
+  }
+
   &__title {
     margin-block-end: 3.2rem;
+
+    @media screen and (max-width: $bp-phone-xl) {
+      margin-block-end: 2.4rem;
+    }
   }
 }
