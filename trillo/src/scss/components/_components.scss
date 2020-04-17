@@ -100,12 +100,22 @@
     width: 100%;
     display: block;
   }
+
+  &__item:not(:first-of-type) &__image {
+    height: 100%;
+  }
 }
 
 .movie-critics {
   list-style: none;
   flex: 0 0 23%;
   margin-block-end: 1.6rem;
+
+  @media screen and (max-width: $bp-tablet) {
+    margin-block-end: 0;
+    display: flex;
+    width: 100%;
+  }
 }
 
 .movie-critic {
@@ -114,6 +124,11 @@
 
   &:not(:last-of-type) {
     margin-block-end: 2.4rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      margin-block-end: 0;
+      margin-inline-end: 4rem;
+    }
   }
 }
 
@@ -235,6 +250,10 @@
 
   &__text-visible {
     padding: 2rem 7.5rem;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 1.4rem 7.5rem;
+    }
   }
 
   &__text-invisible {
@@ -242,6 +261,10 @@
     padding: 2rem 0;
     left: 0;
     top: -100%;
+
+    @media screen and (max-width: $bp-tablet) {
+      padding: 1.4rem 0;
+    }
   }
 
   &:hover {
@@ -258,6 +281,11 @@
 
   &:hover &__text-invisible {
     top: 0;
+  }
+
+  @media screen and (max-width: $bp-tablet) {
+    font-size: 1.3rem;
+    width: 19.6rem;
   }
 }
 
