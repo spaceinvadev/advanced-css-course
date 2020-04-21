@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-body;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 1.6rem;
+  color: $color-secondary;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  &::-webkit-scrollbar {
+    inline-size: 8px;
+    background-color: hsl(0, 0%, 100%);
+
+    &-track {
+      border-radius: 8px;
+      background-color: hsla(0, 0%, 0%, 0.1);
+      border: 1px solid hsl(0, 0%, 80%);
+    }
+
+    &-thumb {
+      border-radius: 8px;
+      background: $color-primary;
+      border: 1px solid $color-primary-dark;
+
+      &:hover,
+      &:active {
+        background: $color-primary-dark;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: $font-display;
+}
