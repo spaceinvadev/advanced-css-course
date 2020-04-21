@@ -1,0 +1,24 @@
+.realtors {
+  background-color: $color-grey-light-2;
+  grid-column: col-start 7 / -1;
+}
+
+.features {
+  background-color: $color-grey-light-2;
+  grid-column: center-start / center-end;
+}
+
+.story {
+  &__pictures {
+    grid-column: full-start / col-end 4;
+  }
+
+  &__content {
+    grid-column: col-start 5 / full-end;
+  }
+}
+
+.gallery {
+  background-color: $color-grey-dark-1;
+  grid-column: full-start / full-end;
+}
