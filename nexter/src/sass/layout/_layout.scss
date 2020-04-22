@@ -99,4 +99,53 @@
   background-color: $color-secondary;
   grid-column: full-start / full-end;
   color: $color-grey-light-2;
+  padding: 7.2rem 6.4rem;
+
+  &__copyright {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+}
+
+.footer-nav {
+  list-style: none;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  // grid-gap: 1.6rem;
+  // align-items: center;
+  // justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__item {
+    margin-block-end: 4rem;
+
+    &__link {
+      &:link,
+      &:visited {
+        display: block;
+        font-size: 1.3rem;
+        letter-spacing: 0.4px;
+        color: $color-grey-light-2;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.3rem 1.6rem;
+        background-color: rgba(255, 255, 255, 0.025);
+        transition: all 0.2s;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        transform: translateY(-2px);
+      }
+    }
+
+    &:not(:last-of-type) {
+      margin-inline-end: 1.6rem;
+      margin-block-end: 1.6rem;
+    }
+  }
 }
