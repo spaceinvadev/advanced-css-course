@@ -36,11 +36,78 @@
 
 .story {
   &__pictures {
+    min-height: 32rem;
     grid-column: full-start / col-end 4;
+    background-image: linear-gradient(
+        rgba($color-primary, 0.5),
+        rgba($color-primary, 0.5)
+      ),
+      url("../assets/back.jpg");
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+  }
+
+  &__img--1 {
+    width: 100%;
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+    box-shadow: 0 2rem 5rem hsla(0, 0%, 0%, 0.1);
+  }
+
+  &__img--2 {
+    width: 112%;
+    grid-row: 4 / 6;
+    grid-column: 4 / 7;
+    z-index: 2;
+    box-shadow: 0 2rem 5rem hsla(0, 0%, 0%, 0.1);
   }
 
   &__content {
+    min-height: 32rem;
+    background-color: $color-grey-light-1;
     grid-column: col-start 5 / full-end;
+    padding: 4rem 8vw;
+
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: flex-start;
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+
+  &__label {
+    margin-block-end: 0.8rem;
+  }
+
+  &__title {
+    margin-block-end: 1.6rem;
+  }
+
+  &__desc {
+    margin-block-end: 2.4rem;
+  }
+}
+
+// Button
+.btn {
+  border: none;
+  font-family: $font-body;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 1.2rem 1.6rem;
+  background-color: $color-primary;
+  color: #fff;
+  letter-spacing: 1.3px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $color-primary-dark;
   }
 }
 

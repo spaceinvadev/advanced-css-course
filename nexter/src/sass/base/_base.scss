@@ -12,6 +12,11 @@ html {
 * {
   margin: 0;
   padding: 0;
+
+  &::selection {
+    background-color: $color-primary;
+    color: hsl(0, 0%, 100%);
+  }
 }
 
 body {
@@ -51,12 +56,26 @@ a {
   text-decoration: none;
 }
 
-h1 {
+h1,
+.heading-2,
+.heading-4 {
   font-family: $font-display;
 }
 
+.heading-2 {
+  font-size: 4rem;
+  line-height: 1.3;
+}
+
+.heading-3 {
+  text-transform: uppercase;
+  font-family: $font-body;
+  color: $color-primary;
+  font-size: 1.6rem;
+  letter-spacing: 1.6px;
+}
+
 .heading-4 {
-  font-family: $font-display;
   font-weight: 500;
 
   &--light {
