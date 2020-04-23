@@ -12,3 +12,9 @@ $color-grey-dark-2: hsl(32, 18%, 36%);
 // Fonts
 $font-display: "Expletus Sans", cursive;
 $font-body: "Didact Gothic", sans-serif;
+
+// Responsive Breakpoints
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 47.5em; // 760px
+$bp-small: 37.5em; // 600px
