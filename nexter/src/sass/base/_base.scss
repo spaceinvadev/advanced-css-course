@@ -56,10 +56,16 @@ a {
   text-decoration: none;
 }
 
-h1,
+.heading-1,
 .heading-2,
 .heading-4 {
   font-family: $font-display;
+}
+
+.heading-1 {
+  font-size: 4rem;
+  color: $color-grey-light-1;
+  line-height: 1;
 }
 
 .heading-2 {

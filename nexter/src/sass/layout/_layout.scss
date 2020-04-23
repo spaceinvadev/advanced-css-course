@@ -27,7 +27,63 @@
 
 .header {
   grid-column: full-start / col-end 6;
-  background-color: $color-grey-dark-2;
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.8),
+      rgba($color-secondary, 0.8)
+    ),
+    url("../assets/hero.jpeg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  justify-content: center;
+  grid-row-gap: 1.6rem;
+  padding: 6.4rem;
+
+  &__logo {
+    width: 18rem;
+    justify-self: center;
+  }
+
+  .btn {
+    align-self: start;
+    justify-self: start;
+  }
+
+  &__visibility {
+    &-text {
+      font-size: 1.4rem;
+      color: $color-grey-light-1;
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      grid-column-gap: 1.6rem;
+      align-items: center;
+      width: 90%;
+      justify-self: center;
+
+      &::before,
+      &::after {
+        content: "";
+        height: 1px;
+        display: block;
+        background-color: currentColor;
+      }
+    }
+
+    &-logos {
+      justify-self: center;
+      display: flex;
+    }
+
+    &-logo {
+      height: 2.4rem;
+
+      &:not(:last-of-type) {
+        margin-inline-end: 4rem;
+      }
+    }
+  }
 }
 
 .homes {
